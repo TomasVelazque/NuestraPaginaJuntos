@@ -269,6 +269,118 @@
 
 }
 
+.frase-amor{
+    width: 100%;
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    overflow: hidden;
+}
+
+.frase-amor p{
+    max-width: 900px;
+    text-align: center;
+    font-size: 2.2rem;
+    line-height: 1.8;
+    font-weight: 500;
+
+    /* azul más oscuro y elegante */
+    color: #4b6cb7;
+
+    text-shadow:
+        0 0 6px rgba(59, 89, 152, 0.5),
+        0 0 12px rgba(59, 89, 152, 0.4),
+        0 0 24px rgba(59, 89, 152, 0.3);
+
+    animation:
+        brilloFrieren 4s ease-in-out infinite alternate,
+        flotar 5s ease-in-out infinite;
+
+    position: relative;
+    transition: 0.4s ease;
+}
+
+/* partículas */
+.frase-amor p::before,
+.frase-amor p::after{
+    content: "✦";
+    position: absolute;
+    color: #5d7fd6;
+    font-size: 1rem;
+    opacity: 0.7;
+    animation: estrellas 3s infinite alternate;
+}
+
+.frase-amor p::before{
+    top: -15px;
+    left: -20px;
+}
+
+.frase-amor p::after{
+    bottom: -15px;
+    right: -20px;
+}
+
+.frase-amor p:hover{
+    transform: scale(1.03);
+    letter-spacing: 1px;
+}
+
+@keyframes brilloFrieren{
+
+    from{
+        text-shadow:
+            0 0 6px rgba(59, 89, 152, 0.4),
+            0 0 14px rgba(59, 89, 152, 0.3);
+    }
+
+    to{
+        text-shadow:
+            0 0 10px rgba(59, 89, 152, 0.7),
+            0 0 22px rgba(59, 89, 152, 0.5),
+            0 0 35px rgba(59, 89, 152, 0.4);
+    }
+}
+
+@keyframes flotar{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-6px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes estrellas{
+
+    from{
+        opacity: 0.3;
+        transform: translateY(0px);
+    }
+
+    to{
+        opacity: 0.9;
+        transform: translateY(-5px);
+    }
+}
+
+@media(max-width:768px){
+
+    .frase-amor p{
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+
+}
+
         /* RESPONSIVE */
 
         @media(max-width: 768px){
