@@ -16,6 +16,10 @@
             <p>Llevamos juntos:</p>
             <h2 id="dias"></h2>
         </div>
+        <button id="playMusic">🎵 Te dejo esta cancion (apreta aqui)</button>
+        <audio id="bgMusic" loop>
+            <source src="yung kai - blue (sub. español + lyrics) - sweetblue II.mp3" type="audio/mp3">
+        </audio>
     </section>
 
     <section class="momentos">
@@ -26,7 +30,8 @@
             <p> Recuerdo que yo estaba en el canal de voz de z y te uniste, apenas lo hiciste y te escuche por primera vez, tuvimos
                 una charla bastante entretenida/interesante y luego me anime a escribirte por privado (yo nunca le escribia a nadie) ya que senti 
                 una conexion especial contigo, asi comienza nuestra historia. Yo no soy una persona que cree en la suerte pero siempre estoy agradecido de que ambos nos 
-                hayamos podido conocer, sin dudas eres lo mejor que me paso en mi vida, te convertiste en la mujer con la que quiero todo en esta vida <3.
+                hayamos podido conocer, sin dudas eres lo mejor que me paso en mi vida, sos mi lugar seguro en el mundo, sos alguien que me inspira
+                a mejorar siempre cada dia mas, te convertiste en la mujer con la que quiero TODO en esta vida <3.
             </p>
         </div>
         <div class="momento-2">
@@ -35,7 +40,7 @@
             <p> Una de las cosas que mas me gustan es estar en llamada contigo y hablar de todo, amo que me cuentes todo lo que te pasa en el dia,
                 que comamos juntos, que miremos videos o pelis juntos, cada momento que pasamos mientras estamos juntos para mi es especial y muy bello.
                 Cada vez que hablamos de nuestras metas y objetivos, lo amo, yo te re apoyo en todo lo que te propongas llevar adelante, siempre en todo
-                tendras mi apoyo total. Volviendo a las llamdas, amo que compartamos nuestro dia a dia juntos, por eso cada llamada, cada mensaje lo atesoro
+                tendras mi apoyo total. Volviendo a las llamadas, amo que compartamos nuestro dia a dia juntos, por eso cada llamada, cada mensaje lo atesoro
                 muy bien, te amo mucho Paolam.
             </p>
         </div>
@@ -56,11 +61,11 @@
         <p> Te quería dejar una carta para ti Pao en esta pagina para que siempre puedas venir y leerla, para comenzar, quiero agradecerte por
             ser como sos, una chica amigable, muy graciosa, muy amable y dulce, sos una persona a la que admiro muchísimo, siempre te esfuerzas
             mucho en conseguir lo que te propones, eso es algo que me gusta mucho de ti, me encanta mucho esa pasión que hay en ti que le pones
-            a cada cosa, sos una campeona, mi campeona. 
+            a cada cosa, sos una campeona, mi campeona 👑. 
             <br><br>
             Para mi sos una persona muy importante y especial en mi día a día, muchas gracias por elegirme como tu pareja cada día, desde el día
             que nos conocimos sentí una conexión especial contigo, y la verdad no me equivoque, con el tiempo se fue volviendo algo cada vez mas
-            fuerte hasta el día de hoy. 
+            fuerte hasta el día de hoy 💓. 
             <br>
             Cada vez que me pongo a recordar todas las cosas que pasamos juntos me pongo bastante sentimental, pero también me rio de los momentos
             divertidos que hemos pasado, amo mucho cuando te reis como un cui, cuando me haces esos pequeños detalles como dibujos, cuando leemos
@@ -70,12 +75,12 @@
             Se que a veces puedo llegar a ser algo torpe, pero quiero que sepas que este torpe te ama y muchísimo, tanto que seria capaz de
             armar una pagina a las 3:50 de la mañana (me descubriste KASKJDASKJ *levanta las manos*) pero a pesar de las dificultades o 
             discusiones que se nos presenten yo siempre te elegiré a ti porque eres lo mas especial en mi vida, eres mi mundo entero, eres la 
-            mujer con la que quiero tener una casa, casarme y tener mascotas, la mujer que quiero tomar de las manos y vivir la vida.
+            mujer con la que quiero tener una casa, casarme y tener mascotas, la mujer que quiero tomar de las manos y vivir la vida 🤵👰.
             <br><br>
             Un secretito mío para estar de buen humor, que no te he contado, es que salgo a mirar las estrellas en el patio y me pongo 
             a pensar en ti, porque siempre recuerdo esa charla que tuvimos sobre las estrellas, fue de las primeras charlas entre nosotros.
             Siempre que las veo siento que te estoy viendo a ti, tan brillantes y hermosas. Una de las cosas que quiero hacer contigo cuando
-            este ahí, seria verlas juntos, darnos un abrazo fuerte y sentir ese calor. 
+            este ahí, seria verlas juntos, darnos un abrazo fuerte y sentir ese calor 🌠. 
             <br><br>
             Y una cosa que quiero que recuerdes siempre es que yo siempre te voy a apoyar en todo, yo soy tu fan n°1, siempre estaré para ti 
             en tus buenos y malos momentos, en estos últimos estaré mucho mas y me aferrare a ti, conmigo nunca estarás sola, siempre estaré 
@@ -96,6 +101,18 @@
         const diasJuntos = Math.floor(diferencia / (1000 * 60 * 60 * 24));
 
         document.getElementById("dias").innerHTML = diasJuntos + " días ❤️";
+
+
+        const music = document.getElementById("bgMusic");
+        const button = document.getElementById("playMusic");
+
+        button.addEventListener("click", () => {
+
+        music.play();
+
+        button.innerHTML = "💙 Reproduciendo...";
+
+        });
     </script>
 
 </body>
